@@ -1,0 +1,14 @@
+body {
+  font-family: Arial;
+  background: #f5f5f5;
+}
+
+.banner {
+  background: orange;
+  color: white;
+  padding: 40px;
+}
+
+.card {
+  margin-bottom: 20px;
+}
