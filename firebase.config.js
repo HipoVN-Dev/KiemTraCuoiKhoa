@@ -1,13 +1,14 @@
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyB6GXWUVnISpYq5zaFhqgyOF5p-WX12clQ",
-  authDomain: "coffee-management-f8670.firebaseapp.com",
-  projectId: "coffee-management-f8670",
-  storageBucket: "coffee-management-f8670.firebasestorage.app",
-  messagingSenderId: "116792421496",
-  appId: "1:116792421496:web:8018fb23d176232308918d",
-  measurementId: "G-Q8DLBF431R"
+  apiKey: "AIzaSyBgHXt7zPjmF_tHTkhMJbyjbsbG1P8oxRc",
+  authDomain: "coffee-mana.firebaseapp.com",
+  projectId: "coffee-mana",
+  storageBucket: "coffee-mana.firebasestorage.app",
+  messagingSenderId: "610702102756",
+  appId: "1:610702102756:web:9fc3c32621e283ef015cf1",
+  measurementId: "G-EMNEKP775V"
 };
-
-// Initialize Firebase
+// init
 firebase.initializeApp(firebaseConfig);
+
+var db = firebase.firestore();
+var auth = firebase.auth();

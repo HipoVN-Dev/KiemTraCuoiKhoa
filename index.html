@@ -24,15 +24,18 @@
       <span class="navbar-brand">🍟 Shop Đồ Ăn Vặt</span>
 
       <div>
-        <button onclick="login()" class="btn btn-light">Login Google</button>
-        <button onclick="logout()" class="btn btn-danger">Logout</button>
+          <button class="btn btn-primary" id="btn-login" >Nhấn vào để đăng nhập</button>
+            <div class="d-none" id="profile">
+                <img src="https://placehold.co/200" style="width: 50px;height: 50px;border-radius: 50%;" alt="" id="profile-img" />
+                <button class="btn btn-danger" id="btn-logout">Logout</button>
+            </div>
       </div>
     </nav>
 
     <!-- BANNER -->
     <div class="banner text-center">
-      <h1>Thiên đường đồ ăn vặt</h1>
-      <p>Snack - Trà sữa - Bim bim</p>
+      <h1>Tôi ăn bạn​🥵👍​</h1>
+      <p>Bạn đói bạn ăn kệ bạn🤡​</p>
     </div>
 
     <div class="container mt-4">
@@ -40,6 +43,7 @@
 
       <input id="name" class="form-control mb-2" placeholder="Tên sản phẩm" />
       <input id="price" class="form-control mb-2" placeholder="Giá" />
+      <input id="image" class="form-control mb-2" placeholder="Hình ảnh" />
 
       <button onclick="addProduct()" class="btn btn-primary">
         Thêm sản phẩm
@@ -54,6 +58,10 @@
 
     <footer class="text-center mt-5 p-3 bg-light">© 2026 Shop đồ ăn vặt</footer>
 
-    <script src="app.js"></script>
+    <!-- load file config để xác minh danh tính của người dùng -->
+    <script defer src="firebase.config.js"></script>
+    <!-- kiểm tra đăng nhập -->
+    <script defer src="check-login.js"></script>
+    <script defer src="app.js"></script>
   </body>
 </html>

@@ -1,44 +1,34 @@
-// Firebase config
-var firebaseConfig = {
-  apiKey: "AIzaSyA9vZDa_9Bmm99tJHw8MYz3_GwmcFGNnu4",
-  authDomain: "kiemtracuoiki-beb70.firebaseapp.com",
-  projectId: "kiemtracuoiki-beb70",
-};
-
-// init
-firebase.initializeApp(firebaseConfig);
-
-var db = firebase.firestore();
-var auth = firebase.auth();
+const btnLogin = document.getElementById("btn-login");
+const btnLogout = document.getElementById("btn-logout");
 
 // LOGIN GOOGLE
-
-function login() {
+btnLogin.addEventListener("click", function () {
   var provider = new firebase.auth.GoogleAuthProvider();
 
   auth.signInWithPopup(provider).then(function (result) {
     alert("Đăng nhập thành công: " + result.user.displayName);
   });
-}
+})
 
 // LOGOUT
-
-function logout() {
-  auth.signOut();
+btnLogout.addEventListener("click", function () {
+ auth.signOut();
 
   alert("Đã đăng xuất");
-}
+})
 
 // CREATE
 
 function addProduct() {
   var name = document.getElementById("name").value;
   var price = document.getElementById("price").value;
+  var image = document.getElementById("image").value;
 
   db.collection("products")
     .add({
       name: name,
       price: price,
+      image: image
     })
     .then(function () {
       alert("Thêm thành công");
@@ -62,7 +52,7 @@ function loadProducts() {
 <div class="col-md-3">
 
 <div class="card p-3">
-
+<img src="${data.image}" class="card-img-top" alt="${data.name}" />
 <h5>${data.name}</h5>
 
 <p>${data.price} VND</p>
